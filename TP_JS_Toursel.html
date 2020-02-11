@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+  <title>Tp JAVASCRIPT</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  
+</head>
+<body>
+	<h1>JavaSCRIPT TP NOTE</h1>
+	<button onclick=" fun() ">Creer le tableau</button>
+	<button onclick=" jeu() ">Jouer au jeu</button>
+	
+    
+
+</body>
+
+<script type="text/javascript">
+
+	var tab=[4,675,32,87,9837,364,7492,45,345,324,374,8364,5967,12,483,8573,659,365,9573,309];
+
+	function fun(){
+			alert (" Il etait deja créer mouahahah");
+		}
+
+	function quiEstLeNombreLePlusGrand(a,b) {
+			if (a>b) 
+			{
+				return a;
+			} 
+			else if (b>a)
+			{
+				return b;
+			}
+			else if (a==b) 
+			{
+				alert("Les deux valeurs a et b sont identiques : " + a);
+			}
+		}
+		
+	function aleatoireNombre(a) {
+			return Math.random() * (a);
+		}
+
+	function affectation(a,b){
+		return tab[a] = b;
+		}
+		
+	function jeu(){
+	var somme;
+
+		for (var i=0;i<5;i+=1) 
+		{
+			var a = aleatoireNombre(tab.length);
+			var b = aleatoireNombre(tab.length);
+			if (a == b) 
+			{
+				alert("perdu !");
+				break; 
+			}
+			else 
+			{
+				if (a>b) 
+				{
+					var abis = -1*a;
+					var bbis = b+50;
+					affectation(a,abis);
+					affectation(b,bbis);
+				}
+				else if (b>a) 
+				{
+					var bbis = -1*b;
+					var abis = a+50;
+					affectation(a,abis);
+					affectation(b,bbis);
+				}
+			}
+		}
+		for(var j=0; j<=(tab.length);j+=1) 
+		{
+			somme = 0;
+			somme = somme + tab[i]; 
+		}
+		if(somme>=0) 
+		{
+			alert("gagner !");
+		}
+		else 
+		{
+			alert("perdu !");
+		}
+	}
+
+
+  </script>
+</html>
